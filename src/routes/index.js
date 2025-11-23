@@ -1,5 +1,18 @@
-import { Router } from 'express';
+import express from "express";
+import categoryRoutes from './category.route.js';
+import companyRoutes from "./company.route.js";
+import genderRoutes from "./gender.route.js";
+import socialProfilRoute from "./socialProfil.route.js";
+import campaignRoute from "./campaign.route.js";
+import consumerRoutes from "./consumer.route.js";
 
-const router = Router();
+const router = express.Router();
+
+router.use("/categories", categoryRoutes);
+router.use("/companies", companyRoutes);
+router.use("/genders", genderRoutes);
+router.use("/social-profils", socialProfilRoute);
+router.use("/campaigns", campaignRoute);
+router.use("/consumers", consumerRoutes);
 
 export default router;

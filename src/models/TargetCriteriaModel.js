@@ -10,7 +10,7 @@ export default (sequelize) => {
         max_age: { type: DataTypes.SMALLINT },
         city: { type: DataTypes.STRING(100) }
     }, {
-        tableName: "TARGET_CRITERIA",
+        tableName: "target_criteria",
         timestamps: false
     });
 

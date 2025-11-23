@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import sequelize from "../config/database.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -9,20 +9,21 @@ const __dirname = path.dirname(__filename);
 const db = {};
 
 const files = fs.readdirSync(__dirname).filter(file =>
-    file.endsWith("Model.js") && file !== "index.js"
+  file.endsWith("Model.js") && file !== "index.js"
 );
 
 for (const file of files) {
-    const modelPath = path.join(__dirname, file);
-    const model = (await import(modelPath)).default(sequelize);
+  const modelPath = path.join(__dirname, file);
 
-    db[model.name] = model;
+  const modelURL = pathToFileURL(modelPath).href;
+
+  const model = (await import(modelURL)).default(sequelize);
+
+  db[model.name] = model;
 }
 
 Object.values(db).forEach(model => {
-    if (model.associate) {
-        model.associate(db);
-    }
+  if (model.associate) model.associate(db);
 });
 
 db.sequelize = sequelize;

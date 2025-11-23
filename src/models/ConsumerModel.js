@@ -11,7 +11,7 @@ export default (sequelize) => {
         id_gender: { type: DataTypes.INTEGER },
         city: { type: DataTypes.STRING(100) }
     }, {
-        tableName: "CONSUMER",
+        tableName: "consumer",
         timestamps: false
     });
 

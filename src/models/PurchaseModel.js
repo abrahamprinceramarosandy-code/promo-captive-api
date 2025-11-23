@@ -11,7 +11,7 @@ export default (sequelize) => {
         payment_status: { type: DataTypes.STRING(50), allowNull: false },
         company_confirms: { type: DataTypes.BOOLEAN, defaultValue: false }
     }, {
-        tableName: "PURCHASE",
+        tableName: "purchase",
         timestamps: false
     });
 

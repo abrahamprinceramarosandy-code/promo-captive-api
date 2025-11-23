@@ -5,7 +5,7 @@ export default (sequelize) => {
         id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
         type: { type: DataTypes.STRING(50), allowNull: false, unique: true }
     }, {
-        tableName: "SOCIAL_PROFIL",
+        tableName: "social_profil",
         timestamps: false
     });
 

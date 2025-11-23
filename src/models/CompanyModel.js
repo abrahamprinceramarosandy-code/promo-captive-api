@@ -10,7 +10,7 @@ export default (sequelize) => {
         address: { type: DataTypes.STRING },
         creation_date: { type: DataTypes.DATE, allowNull: false }
     }, {
-        tableName: "COMPANY",
+        tableName: "company",
         timestamps: false
     });
 

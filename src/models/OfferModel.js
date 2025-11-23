@@ -11,7 +11,7 @@ export default (sequelize) => {
         cta_link: { type: DataTypes.STRING },
         created_at: { type: DataTypes.DATE, allowNull: false }
     }, {
-        tableName: "OFFER",
+        tableName: "offer",
         timestamps: false
     });
 

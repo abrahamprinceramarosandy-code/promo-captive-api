@@ -10,7 +10,7 @@ export default (sequelize) => {
         start_date: { type: DataTypes.DATE, allowNull: false },
         end_date: { type: DataTypes.DATE }
     }, {
-        tableName: "CAMPAIGN",
+        tableName: "campaign",
         timestamps: false
     });
 

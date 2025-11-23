@@ -10,7 +10,7 @@ export default (sequelize) => {
         is_used: { type: DataTypes.BOOLEAN, defaultValue: false },
         used_at: { type: DataTypes.DATE }
     }, {
-        tableName: "PROMO_CODE",
+        tableName: "promo_code",
         timestamps: false
     });
 

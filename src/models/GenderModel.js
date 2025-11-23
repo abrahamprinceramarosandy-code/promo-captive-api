@@ -5,7 +5,7 @@ export default (sequelize) => {
         id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
         type: { type: DataTypes.STRING(20), allowNull: false, unique: true }
     }, {
-        tableName: "GENDER",
+        tableName: "gender",
         timestamps: false
     });
 
