@@ -36,4 +36,5 @@ INSERT INTO COMPANY (name, email, number, id_category, address, creation_date) V
 INSERT INTO CONSUMER (forname, email, number, age, id_social_profil, id_gender, city) VALUES
 ('Antoine', 'antoine.d@mail.com', '06 10 20 30 40', 22, 1, 1, 'Paris'),
 ('Léa', 'lea.m@email.fr', '07 50 60 70 80', 35, 2, 2, 'Lyon'),
-('Sophie', 'sophie.t@pro.net', '06 33 44 55 66', 48, 3, 2, 'Marseille');
+('Sophie', 'sophie.t@pro.net', '06 33 44 55 66', 48, 3, 2, 'Marseille'),
+('Jean', 'jean.jy@pro.net', '07 33 44 55 66', 39, 3, 1, 'Marseille');
