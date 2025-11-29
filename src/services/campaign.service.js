@@ -2,7 +2,7 @@ import db from "../models/index.js";
 
 export const getAllCampaign = async ()  => {
    try {
-    const campaigns = await db.Campaign.finAll({
+    const campaigns = await db.Campaign.findAll({
         include : [
             {
                 model : db.Company,
@@ -16,6 +16,7 @@ export const getAllCampaign = async ()  => {
             }
         ]
     })
+    return campaigns;
    } catch (error) {
     throw new Error("Error fetching campaigns: " +error.message);
    } 
